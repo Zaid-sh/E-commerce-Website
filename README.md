@@ -1,1 +1,1 @@
-# E-commerce-Website
+"Ziddy's Car Dealership" is a project for our course ENSF 381. It serves as our first HTML webpage assignment, and showcases what we have learned so far.
