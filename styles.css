@@ -9,6 +9,14 @@ header {
     display: flex;
     flex-direction: inline;
 }
+.headerText {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    color: white;
+    font-size: 50px;
+}
 
 .nav-links {
     width: 100%;
