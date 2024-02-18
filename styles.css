@@ -16,7 +16,7 @@ header {
     justify-content: right;
     align-items: center;
     color: white;
-    font-size: 90px;
+    font-size: 40px;
 }
 
 .nav-links {
@@ -27,12 +27,107 @@ header {
 /*-------------------- Main Page Specifc --------------------*/
 
 /*-------------------- Product Page Specific --------------------*/
-.rowGroup {
+.productArea {
     background-color: #ddd;
     padding: 20px;
     margin: 20px;
 }
+.inventoryHeader{
+    width: auto;
+    font-size: 70px;
+    text-align: center;
+    border-bottom: 2px solid orange;
+}
+.rowGroup {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.EQS, .Jesko, .Impreza, .Versa, .Countach, .Integra, .Mazda2, .Civic {
+    transition: 0.72s;
+    width: 50%;
+    text-align: center;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    .price {
+        color: #007BFF;
+        font-weight: bold;
+        font-size: 30px;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .rowGroup {
+        flex-direction: row;
+    }
+}
+@media screen and (max-width: 768px) {
+    .rowGroup {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .EQS, .Jesko, .Impreza, .Versa, .Countach, .Integra, .Mazda2, .Civic {
+        width: 100%;
+    }
+}
+.EQS:hover, .Jesko:hover, .Impreza:hover, .Versa:hover, .Countach:hover, .Integra:hover, .Mazda2:hover, .Civic:hover {
+    transition: 0.72s;
+    background-color: #ffffff;
+    /* yes, it does change colour on hover, but the colour change is hard to notice */
+}
+
+.addToCart {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.72s;
+    color: white;
+}
+.addToCart:hover {
+    background-color: #45A049;
+    transition: 0.72s;
+}
 
 /*-------------------- Contact Page Specific --------------------*/
+.contactMain {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+.contact-method {
+    display: flex;
+    flex-direction: column;
+    padding: 0px;
+    margin: 0px;
+    border-radius: 10px;
+    img {
+        transition: 0.72s;
+        width: 50px;
+    }
+}
+
+.contact-method:hover {
+    transition: 0.72s;
+    color: #007BFF;
+    a {
+        transition: 0.72s;
+        color: #007BFF;
+    }
+    img {
+        transition: 0.72s;
+        width: 60px
+    }
+}
 
 /*-------------------- Login Page Specific -------------------- */

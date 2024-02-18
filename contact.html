@@ -3,15 +3,9 @@
 <head>
     <title>Ziddy's Car Dealership - Products</title>
     <link rel="icon" href="SiteIcon.png" type="image/gif" sizes="16x16">
-    <!-- change hyperlinks t0 make them more readable -->
-    <style> 
-        a {
-            color: #00e5ff;
-        }
-    </style>
     <link rel =" shortcut icon" href ="images/favicon.ico" type =" image /x - icon" >
 </head>
-<body style="background-color: #282726; color: white;">
+<body>
     <header>
         <img src="images/ZiddysCarDealershipLogo.jpg"
         alt="ZiddysCarDealershipLogo" width="300" height="300">
@@ -19,6 +13,7 @@
         <link rel="stylesheet" href="styles.css">
     </header>
     <br>
+
     <div class="nav-links"> <!-- div to contain all the navigation links. -->
         <center>
         <p  style="font-family:'Calibri'; color: white;">
@@ -26,34 +21,34 @@
         </p>
         </center>
     </div>
-    <main style="text-align: center;"> <!-- main container to organize the content -->
-        <font size="+3" style="font-family:'Calibri'; color: white;"><h1>Contact us</h1></font>
-        <p><font style="font-family:'Calibri'; color: white;">
+
+    <main class="contactMain"> <!-- main container to organize the content -->
+       <h1>Contact us</h1>
+        <p>
             Our staff at Ziddy's Car Dealership is comitted to helping you find a car that is right for you. <br>
             Please don't hesitate to reach out to us if you require assistance with anything!
-        </font></p>
+        </p>
         <br>
-        <!-- table to organize images and links -->
-        <table style="font-family: 'Calibri'; color:white" cellpadding="10px" align="center">
-            <tr>
-                <td><img src="images/phone.png", width="50px" alt="phoneicon"></td>
-                <td><p>123-456-7890</p></td>
-            </tr>
-            <tr>
-                <td><img src="images/mailIcon.png", width="50px" alt="mailicon"></td>
-                <td><a href="mailto:staff@ziddy.org" style="color:#00e5ff">Email Us</a></td>
-            </tr>
-            <tr>
-                <td><img src="images/instagram.png", width="50px" alt="instagramicon"></td>
-                <td><a href="https://instagram.com" style="color:#00e5ff">Our Instagram</a></td>
-            </tr>
-            <tr>
-                <td><img src="images/linkedIN.png", width="50px" alt="linkedinicon"></td>
-                <td><a href="https://linkedin.com" style="color:#00e5ff">Our LinkedIn</a></td>
-            </tr>
-        </table>
+
+        <div class="contact-method">
+            <img src="images/phone.png", width="50px" alt="phoneicon">
+            <p>123-456-7890</p>
+        </div>
+        <div class="contact-method">
+            <img src="images/mailIcon.png", width="50px" alt="mailicon">
+            <a href="mailto:staff@ziddy.org"><p>Email Us</p></a>
+        </div>
+        <div class="contact-method">
+            <img src="images/instagram.png", width="50px" alt="instagramicon">
+            <a href="https://instagram.com"><p>Our Instagram</p></a>
+        </div>
+        <div class="contact-method">
+            <img src="images/linkedIN.png", width="50px" alt="linkedinicon">
+            <a href="https://linkedin.com"><p>Our LinkedIn</p></a>
+        </div>
+
     </main>
-    <footer style="color: white; font-family:'Calibri';">
+    <footer>
         <br>
         Copyright ©2024 Mohammed Zaid Shaikh and Adam Yuen. All rights reserved. <!-- Copyright Notice -->
     </footer>
