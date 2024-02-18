@@ -39,63 +39,85 @@
     <h1 style="font-family: Calibri; color:white; text-align: center;">Our Inventory</h1>
 
     <br>
-    <main> 
-        <table border="1px solid orange" bgcolor="#151413" align="center"> <!-- table 1 to organize all the products and their associated information -->
-            <tr>
-                <th><font size="+2" style="font-family:'Calibri'"><h1 style="text-align:center; color:white;"><strong>2023 Mercedes Benz EQS Sedan</strong></h1></font></td>
-                <th><font size="+2" style="font-family:'Calibri'"><h1 style="text-align:center; color:white;"><strong>2023 Koenigsegg Jesko 24K Edition</strong></h1></font></td>
-            </tr>
-            <tr>
-                <td><img src="images/EQS.jpg" alt="Mercedes EQS" width="650px"></td>
-                <td><img src="images/Expensive.jpg" alt="Koenigsegg Jesko" width="550px"></td>
-            </tr>
-            <tr>
-                <td><font size="+2" style="font-family:'Calibri'"><p style="text-align:center; color:white;">$165,000</p></font></td>
-                <td><font size="+2" style="font-family:'Calibri'"><p style="text-align:center; color:white;">$4,100,000</p></font></td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
-                        <center><input type="submit" value="Add to Cart"></center>
-                    </form>
-                </td>
-                <td>
-                    <form>
-                        <center><input type="submit" value="Add to Cart"></center>
-                    </form>
-                </td>
-            </tr>
-        </table>
-        <br><br>
-        <table border="1px" bgcolor="#151413" align="center"> <!-- table 2 to organize all the products and their associated information -->
-            <tr>
-                <th><font size="+2" style="font-family:'Calibri'"><h1 style="text-align:center; padding: 3px; color:white;"><strong>1998 Subaru Impreza STi Wagon</strong></h1></font></td>
-                <th><font size="+2" style="font-family:'Calibri'"><h1 style="text-align:center; padding: 3px; color:white;"><strong>2007 Nissan Versa Note SV</strong></h1></font></td>
-            </tr>
-            <tr>
-                <td><img src="images/Subaru.jpg" alt="Subaru Impreza Wagon" width="588px"></td>
-                <td><img src="images/Versa.jpg" alt="Nissan Versa" width="613px"></td>
-            </tr>
-            <tr>
-                <td><font size="+2" style="font-family:'Calibri'"><p style="text-align:center; color:white;">$48,000</p></font></td>
-                <td><font size="+2" style="font-family:'Calibri'"><p style="text-align:center; color:white;">$4,204</p></font></td>
-            </tr>
-            <tr>
-                <td>
-                    <form>
-                        <center><input type="submit" value="Add to Cart"></center>
-                    </form>
-                </td>
-                <td>
-                    <form>
-                        <center><input type="submit" value="Add to Cart"></center>
-                    </form>
-                </td>
-            </tr>
-        </table>
+    <main>
+        <div class="rowGroup">
+            <div class="EQS">
+                <table>
+                    <tr><th><h1><strong>2023 Mercedes Benz EQS Sedan</strong></h1></td></tr>
+                    <tr><td><img src="images/EQS.jpg" alt="Mercedes EQS" width="650px"></td></tr>
+                    <tr><td><p>$165,000</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div> 
+            <div class="Jesko">
+                <table>
+                    <tr><th><h1><strong>2023 Koenigsegg Jesko 24K Edition</strong></h1></th></tr>
+                    <tr><td><img src="images/Expensive.jpg" alt="Koenigsegg Jesko" width="550px"></td></tr>
+                    <tr><td><p>$4,100,000</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="rowGroup">
+            <div class="Impreza">
+                <table> <!-- table 2 to organize all the products and their associated information -->
+                    <tr><th><h1><strong>1998 Subaru Impreza STi Wagon</strong></h1></td></tr>
+                    <tr><td><img src="images/Subaru.jpg" alt="Subaru Impreza Wagon" width="588px"></td></tr>
+                    <tr><td><p>$48,000</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+            <div class="Versa">
+                <table>
+                    <tr><th><h1><strong>2007 Nissan Versa Note SV</strong></h1></td></tr>
+                    <tr><td><img src="images/Versa.jpg" alt="Nissan Versa" width="613px"></td></tr>
+                    <tr><td><p>$4,204</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="rowGroup">
+            <div class="Countach">
+                <table> <!-- table 1 to organize all the products and their associated information -->
+                    <tr><th><h1><strong>1981 Lamborghini Countach</strong></h1></td></tr>
+                    <tr><td><img src="images/Countach.jpg" alt="Lamborghini Countach" width="650px"></td></tr>
+                    <tr><td><p>$2,450,000</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+            <div class="Integra">
+                <table>
+                    <tr><th><h1><strong>2023 Acura Integra</strong></h1></td></tr>
+                    <tr><td><img src="images/Integra.jpg" alt="Acura Integra" width="550px"></td></tr>
+                    <tr><td><p>$47,000</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="rowGroup">
+            <div class="Mazda2">
+                <table> <!-- table 1 to organize all the products and their associated information -->
+                    <tr><th><h1><strong>2013 Mazda 2 GS</strong></h1></td></tr>
+                    <tr><td><img src="images/Mazda2.jpg" alt="Mazda 2" width="550px"></td></tr>
+                    <tr><td><p>$9,990</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+            <div class="Civic">
+                <table>
+                    <th><h1><strong>2012 Honda Civic LX</strong></h1></td>
+                    <tr><td><img src="images/Civic.jpg" alt="Honda Civic" width="650px"></td></tr>
+                    <tr><td><p>$10,500</p></td></tr>
+                    <tr><td><form><input type="submit" value="Add to Cart"></form></td></tr>
+                </table>
+            </div>
+        </div>
     </main>
 
-    <footer style="color: white;">
+    <footer>
         <br>
         Copyright ©2024 Mohammed Zaid Shaikh and Adam Yuen. All rights reserved. <!-- Copyright Notice -->
     </footer>

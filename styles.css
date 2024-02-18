@@ -8,6 +8,7 @@ header {
     margin: 0;
     display: flex;
     flex-direction: inline;
+    border-bottom: 4px solid orange;
 }
 .headerText {
     width: 100%;
@@ -15,7 +16,7 @@ header {
     justify-content: right;
     align-items: center;
     color: white;
-    font-size: 50px;
+    font-size: 90px;
 }
 
 .nav-links {
@@ -23,3 +24,15 @@ header {
     /* do shit */
 }
 
+/*-------------------- Main Page Specifc --------------------*/
+
+/*-------------------- Product Page Specific --------------------*/
+.rowGroup {
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+}
+
+/*-------------------- Contact Page Specific --------------------*/
+
+/*-------------------- Login Page Specific -------------------- */
