@@ -10,7 +10,7 @@
     <link rel =" shortcut icon" href ="images/favicon.ico" type =" image /x - icon" >
     <link rel="stylesheet" href="styles.css">
 </head>
-<body style="background-color: #282726; color: white">
+<body>
 
     <header>
         <img src="images/logoAssignment2Update.png"
@@ -25,30 +25,22 @@
         <font size="+2"> <b> <a class="nav-links" href="contact.html">Contacts</a> </b> </font>
         <font size="+2"> <b> <a class="nav-links" href="login.html">Login</a> </b> </font>
     </div>
-<main>
-    <br>
-    <center>
-        <font size="+4"> <b> Login </b> </font> <!-- Login title -->
-    </center>
 
-    <center>
-    <form>
+<main class="main-login">
+    <form class="login">
         <table> <!-- Table to format login nicely -->
             <tr>
                 <th> <font size="+2"> <label for="username">Username:</label> </font> </th> <!-- Username box -->
-                <td> <font size="+2"> <input type="text" id="username" name="username" placeholder="Enter your username" required> </font> </td> <!-- Username data and required to enter -->
-                <br>
+                <tr> <td> <input class="login-details" type="text" id="username" name="username" placeholder="Enter your username" required> </td> </tr> <!-- Username data and required to enter -->
             </tr>
             <tr>
                 <th> <font size="+2"> <label for="password">Password:</label> </font> </th> <!-- Password box -->
-                <td> <font size="+2"> <input type="password" id="password" name="password" placeholder="Enter your password" required> </font> </td> <!-- Password data and required to enter -->
-                <br>
+                <tr> <td> <font size="+2"> <input class="login-details" type="password" id="password" name="password" placeholder="Enter your password" required> </font>  <!-- Password data and required to enter -->
+                <button class="login-button" type="submit">Login</button> </pre> </td> </tr>
             </tr>
         </table>
-        <pre><font size="+1.75"> <b> <a href="signup.css">Sign-up</a> </b> </font>                     <button type="submit">Login</button> </pre> <!-- Sign-up and login button spaced properly -->
+        <pre><font size="+1.75"> <b> <a class="sign-up" href="signup.css">Sign-up</a> </b> </font> <!-- Sign-up and login button spaced properly -->
     </form>
-    </center>
-    <br>
 </main>
 
 <footer>
