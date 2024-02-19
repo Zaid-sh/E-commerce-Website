@@ -46,44 +46,31 @@ header {
     text-align: center;
     border-bottom: 2px solid orange;
 }
-.rowGroup {
+
+/* "Product Styling" */
+.rowGroup { 
     display: flex;
     width: 100%;
 }
-img {
-    max-width: 100%;
-    border-radius: 8px;
-    margin-bottom: 10px;
-}
 .EQS, .Jesko, .Impreza, .Versa, .Countach, .Integra, .Mazda2, .Civic {
-    transition: 0.72s;
-    width: 50%;
-    text-align: center;
     background-color: #f9f9f9;
     padding: 20px;
     margin: 20px;
     border-radius: 10px;
+
+    transition: 0.72s;
+    width: 50%;
+    text-align: center;
     .price {
         color: #007BFF;
         font-weight: bold;
         font-size: 30px;
     }
 }
-
-@media screen and (min-width: 769px) {
-    .rowGroup {
-        flex-direction: row;
-    }
-}
-@media screen and (max-width: 768px) {
-    .rowGroup {
-        flex-direction: column;
-        width: 100%;
-        align-items: center;
-    }
-    .EQS, .Jesko, .Impreza, .Versa, .Countach, .Integra, .Mazda2, .Civic {
-        width: 100%;
-    }
+img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 .EQS:hover, .Jesko:hover, .Impreza:hover, .Versa:hover, .Countach:hover, .Integra:hover, .Mazda2:hover, .Civic:hover {
     transition: 0.72s;
@@ -91,6 +78,7 @@ img {
     /* yes, it does change colour on hover, but the colour change is hard to notice */
 }
 
+/* add to card section */
 .addToCart {
     background-color: #4CAF50;
     padding: 10px;
@@ -102,6 +90,24 @@ img {
 .addToCart:hover {
     background-color: #45A049;
     transition: 0.72s;
+}
+
+/* computer monitors and laptop displays */
+@media screen and (min-width: 769px) {
+    .rowGroup {
+        flex-direction: row;
+    }
+}
+/* mobile devices in vertical mode */
+@media screen and (max-width: 768px) {
+    .rowGroup {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+    .EQS, .Jesko, .Impreza, .Versa, .Countach, .Integra, .Mazda2, .Civic {
+        width: 100%;
+    }
 }
 
 /*-------------------- Contact Page Specific --------------------*/
