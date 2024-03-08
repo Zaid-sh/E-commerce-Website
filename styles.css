@@ -27,6 +27,7 @@ header {
     padding: 10px 20px 10px 20px;
     text-decoration: none;
     color: white;
+    font-size: large;
 }
 
 footer {
@@ -145,37 +146,23 @@ img {
     }
 }
 
-/*-------------------- Contact Page Specific --------------------*/
-.contactMain {
-    background-color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-.contact-method {
+.cart {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
-    padding: 0px;
-    margin: 0px;
-    border-radius: 10px;
-    img {
-        transition: 0.72s;
-        width: 50px;
-    }
 }
 
-.contact-method:hover {
-    transition: 0.72s;
-    color: #007BFF;
-    a {
-        transition: 0.72s;
-        color: #007BFF;
-    }
-    img {
-        transition: 0.72s;
-        width: 60px
-    }
+.cartItem0, .cartItem1, .cartItem2, .cartItem3, .cartItem4, .cartItem5, .cartItem6, .cartItem7 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.cartItemName, .cartItemPrice, .cartItemCount{
+    padding: 20px;
+    margin: 20px;
 }
 
 /*-------------------- Login Page Specific -------------------- */
@@ -210,6 +197,11 @@ img {
     color: #fff;
 }
 
+.login-button:hover {
+    background-color: #45A049;
+    opacity: 1.0;
+}
+
 .sign-up {
     color: #007BFF;
     margin: 10px;
@@ -220,4 +212,15 @@ img {
 .sign-up:hover {
     transition: 0.72s;
     text-decoration: underline;
+}
+
+/*-------------------- Signup Page Specific ------------------- */
+.main-signup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
 }
