@@ -12,42 +12,37 @@
 </head>
 <body>
     <script>
-        document.getElementById('signup').addEventListener('submit', function(event) {
-        event.preventDefault();
-        var username = document.getElementById('username').value;
-        var password = document.getElementById('password').value;
-        var confirmPassword = document.getElementById('confirm-password').value;
-        var email = document.getElementById('email').value;
+         function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var confirmPassword = document.getElementById("confirm-password").value;
+            var email = document.getElementById("email").value;
+            var message = "";
 
-        var errorMessage = '';
+            if (!isValidUsername(username)) {
+                message += "Invalid username.\n";
+            }
 
-        // Validation for username
-        if (!isValidUsername(username)) {
-            errorMessage += 'Invalid username\n';
+            if (!isValidPassword(password)) {
+                message += "Invalid password.\n";
+            }
+
+            if (password !== confirmPassword) {
+                message += "Passwords do not match.\n";
+            }
+
+            if (!isValidEmail(email)) {
+                message += "Invalid email address.\n";
+            }
+
+            if (message !== "") {
+                showMessage(message);
+                return false;
+            }
+
+            showMessage("Signup successful!");
+            return true;
         }
-
-        // Validation for password
-        if (!isValidPassword(password)) {
-            errorMessage += 'Invalid password\n';
-        }
-
-        // Validation for confirm password
-        if (password !== confirmPassword) {
-            errorMessage += 'Passwords do not match\n';
-        }
-
-        // Validation for email
-        if (!isValidEmail(email)) {
-            errorMessage += 'Invalid email\n';
-        }
-
-        var messageBox = document.getElementById('message-text');
-        if (errorMessage !== '') {
-            messageBox.textContent = errorMessage;
-        } else {
-            messageBox.textContent = 'Signup Successful!';
-        }
-    });
 
         function isValidUsername(username) {
             var regex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
@@ -55,7 +50,7 @@
         }
 
         function isValidPassword(password) {
-            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?\/`~])[A-Za-z\d!@#$%^&*()-_=+\[\]{}|;:'",.<>?\/`~]{8,}$/;
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&()\-_=+[{\]}|;:'",.<>\/?`~])[A-Za-z\d@$!%*?&()\-_=+[{\]}|;:'",.<>\/?`~]{8,}$/;
             return regex.test(password);
         }
 
@@ -63,6 +58,12 @@
             var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             return regex.test(email);
         }
+
+        function showMessage(message) {
+        var messageBox = document.getElementById("message");
+        messageBox.innerHTML = message.replace(/\n/g, "<br>");
+        }
+
     </script>
 
     <header>
@@ -80,7 +81,7 @@
     </div>
 
 <main class="main-signup">
-    <form class="signup">
+    <form class="signup" onsubmit="return validateForm()">
         <table> <!-- Table to format signup nicely -->
             <tr>
                 <th> <font size="+2"> <label for="username">Username:</label> </font> </th> <!-- Username box -->
@@ -102,11 +103,13 @@
             </tr>
         </table>
     </form>
-    <div id="message-box">
-        <p id="message-text"></p>
-    </div>
+
+
 </main>
 
+<div id="messageBox">
+    <p id="message"></p>
+</div>
 <footer>
     Copyright ©2024 Mohammed Zaid Shaikh and Adam Yuen. All rights reserved. <!-- Copyright Notice -->
 </footer>
