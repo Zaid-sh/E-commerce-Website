@@ -102,9 +102,12 @@
             </div>
         </div>
         <h1 class="inventoryHeader">Your Shopping Cart:</h1>
+        <h2 class="cartPriceTracker">Total: $0</h2>
         <div class="cart">
             <br>
         </div>
+
+        <a href="#" id="cartScrollingThing"><img src="images/cart.png" alt="Jump to Cart"></a>
 
     </main>
 
@@ -114,8 +117,34 @@
 
     <script>
         let shoppingCart = []
-        function remove(id) {
-            console.log(id)
+        function updateTotal() {
+            var total = 0
+            for (var i = 0; i< shoppingCart.length; i++) {
+                total += (shoppingCart[i].itemPrice * shoppingCart[i].count)
+            }
+            var priceClass = document.getElementsByClassName("cartPriceTracker")[0];
+            priceClass.textContent = "Total: $" + total;
+            
+        }
+        function remove(name, divName) {
+            for (var i = 0; i < shoppingCart.length; i++) {
+                if (shoppingCart[i].itemName == name && shoppingCart[i].count > 1) {
+                    shoppingCart[i].count--;
+                    var tagToUpdate = document.getElementsByClassName("cartItemCount")[i];
+                    tagToUpdate.textContent = shoppingCart[i].count;
+                    break;
+                }
+                if (shoppingCart[i].itemName == name && shoppingCart[i].count == 1) {
+                    console.log(shoppingCart[i], name, divName, i)
+                    var spliceIndex = shoppingCart.findIndex(item => item.itemName === name)
+                    shoppingCart.splice(spliceIndex, 1)
+                    cartClass = document.getElementsByClassName("cart")[0];
+                    tagToDelete = document.getElementsByClassName(divName)[0];
+                    cartClass.removeChild(tagToDelete);
+                    break;
+                }
+            }
+            updateTotal();
         }
         function addProduct(name, price, id) {
             alert("You have successfully added " + name + " to your cart.")
@@ -134,7 +163,7 @@
 
             var newCartPrice = document.createElement("p");
             newCartPrice.className = "cartItemPrice";
-            newCartPrice.textContent = price.toString();
+            newCartPrice.textContent = "$" + price.toString();
             newCartDiv.appendChild(newCartPrice);
 
             var newCartCount = document.createElement("p");
@@ -145,9 +174,9 @@
             var newRemoveButton = document.createElement("input");
             newRemoveButton.type = "button";
             newRemoveButton.value = "Remove From Cart";
-            newRemoveButton.className= "addToCart";
+            newRemoveButton.className= "removeFromCart";
             newRemoveButton.addEventListener("click", function () {
-                remove(id)
+                remove(name, newCartDiv.className)
             });
 
             newCartDiv.appendChild(newRemoveButton);
@@ -161,7 +190,6 @@
             else {
                 let i =0
                 for (i = 0; i < shoppingCart.length; i++) {
-
                     if (shoppingCart[i].itemName == name) {
                         shoppingCart[i].count++;
                         tagToUpdate = document.getElementsByClassName("cartItemCount")[i];
@@ -174,8 +202,37 @@
                         insertionPoint.appendChild(newCartDiv);
                     }
             }
+            updateTotal();
         }
 
+    </script>
+
+    <script>
+    /* Extra Component - cool scrolling shopping cart thing */
+    document.addEventListener("DOMContentLoaded", function() {
+        var scrollIcon = document.getElementById("cartScrollingThing");
+
+        function ifNearBottom() {
+            var scrollPosition = window.scrollY;
+            var windowHeight = window.innerHeight;
+            var bodyHeight = document.body.scrollHeight;
+            var distanceToBottom = bodyHeight - (scrollPosition + windowHeight);
+
+            if (distanceToBottom > 300) {
+                scrollIcon.style.display = "block";
+            } else {
+                scrollIcon.style.display = "none";
+            }
+        }
+
+        window.addEventListener("scroll", ifNearBottom);
+
+        scrollIcon.addEventListener("click", function(event) {
+            event.preventDefault();
+            var scrollToBottom = document.body.scrollHeight - window.innerHeight;
+            window.scrollTo({ top: scrollToBottom, behavior: "smooth" });
+    });
+});
     </script>
 </body>
 </html>
