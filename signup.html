@@ -12,7 +12,57 @@
 </head>
 <body>
     <script>
+        document.getElementById('signup').addEventListener('submit', function(event) {
+        event.preventDefault();
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+        var confirmPassword = document.getElementById('confirm-password').value;
+        var email = document.getElementById('email').value;
 
+        var errorMessage = '';
+
+        // Validation for username
+        if (!isValidUsername(username)) {
+            errorMessage += 'Invalid username\n';
+        }
+
+        // Validation for password
+        if (!isValidPassword(password)) {
+            errorMessage += 'Invalid password\n';
+        }
+
+        // Validation for confirm password
+        if (password !== confirmPassword) {
+            errorMessage += 'Passwords do not match\n';
+        }
+
+        // Validation for email
+        if (!isValidEmail(email)) {
+            errorMessage += 'Invalid email\n';
+        }
+
+        var messageBox = document.getElementById('message-text');
+        if (errorMessage !== '') {
+            messageBox.textContent = errorMessage;
+        } else {
+            messageBox.textContent = 'Signup Successful!';
+        }
+    });
+
+        function isValidUsername(username) {
+            var regex = /^[a-zA-Z][a-zA-Z0-9_-]{2,19}$/;
+            return regex.test(username);
+        }
+
+        function isValidPassword(password) {
+            var regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()-_=+\[\]{}|;:'",.<>?\/`~])[A-Za-z\d!@#$%^&*()-_=+\[\]{}|;:'",.<>?\/`~]{8,}$/;
+            return regex.test(password);
+        }
+
+        function isValidEmail(email) {
+            var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return regex.test(email);
+        }
     </script>
 
     <header>
@@ -34,7 +84,7 @@
         <table> <!-- Table to format signup nicely -->
             <tr>
                 <th> <font size="+2"> <label for="username">Username:</label> </font> </th> <!-- Username box -->
-                <tr> <td> <input class="signup-details" type="text" id="username" name="username" placeholder="Enter your username" required> </td> </tr> <!-- Username data and required to enter -->
+                <tr> <td> <input class="signup-details" type="text" id="username" name="username" minlength="3" maxlength="20" placeholder="Enter your username" required> </td> </tr> <!-- Username data and required to enter -->
             </tr>
 
             <tr>
@@ -43,7 +93,7 @@
             </tr>
             <tr>
                 <th> <font size="+2"> <label for="password">Confirm Password:</label> </font> </th> <!-- Confirm Password box -->
-                <tr> <td> <font size="+2"> <input class="signup-details" type="password" id="password" name="password" placeholder="Confirm your password" required> </font> </td> </tr> <!-- Password data and required to enter -->
+                <tr> <td> <font size="+2"> <input class="signup-details" type="password" id="confirm-password" name="password" placeholder="Confirm your password" required> </font> </td> </tr> <!-- Password data and required to enter -->
             </tr>
             <tr>
                 <th> <font size="+2"> <label for="email">Email:</label> </font> </th> <!-- Email box -->
@@ -52,6 +102,9 @@
             </tr>
         </table>
     </form>
+    <div id="message-box">
+        <p id="message-text"></p>
+    </div>
 </main>
 
 <footer>
