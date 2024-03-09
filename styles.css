@@ -268,6 +268,17 @@ img {
     text-decoration: underline;
 }
 
+#messageBox-login {
+    border: 2px;
+    background-color: #f9f9f9;
+    padding: 10px;
+    margin: 20px;
+}
+
+#message-login {
+    margin: 0;
+}
+
 /*-------------------- Signup Page Specific ------------------- */
 .main-signup {
     display: flex;
@@ -305,13 +316,13 @@ img {
     opacity: 1.0;
 }
 
-#messageBox {
+#messageBox-signup {
     border: 2px;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
 }
 
-#message {
+#message-signup {
     margin: 0;
 }
