@@ -171,6 +171,7 @@ img {
     justify-content: center;
     display: flex;
     flex-direction: column;
+    background-color: #ddd;
 }
 
 .cartItem0, .cartItem1, .cartItem2, .cartItem3, .cartItem4, .cartItem5, .cartItem6, .cartItem7 {
@@ -178,12 +179,46 @@ img {
     flex-direction: row;
     align-items: center;
 }
-
-.cartItemName, .cartItemPrice, .cartItemCount{
-    padding: 20px;
-    margin: 20px;
+.cartItem0:hover, .cartItem1:hover, .cartItem2:hover, .cartItem3:hover, .cartItem4:hover, .cartItem5:hover, .cartItem6:hover, .cartItem7:hover {
+    transition: 0.72s;
+    background-color: rgb(159, 159, 159);
+    border-radius: 10px;
 }
 
+.cartItemName, .cartItemPrice, .cartItemCount{
+    padding: 10px;
+    margin: 10px;
+}
+
+.removeFromCart {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+    transition: 0.72s;
+    color: white;
+}
+.removeFromCart:hover {
+    background-color: #ff0000;
+    transition: 0.72s;
+}
+
+.cartPriceTracker {
+    text-align: center;
+}
+
+#cartScrollingThing {
+    position: fixed; 
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: none;
+}
+#cartScrollingThing img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
 /*-------------------- Login Page Specific -------------------- */
 .main-login {
     display: flex;
