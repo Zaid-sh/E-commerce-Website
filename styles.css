@@ -268,14 +268,15 @@ img {
     text-decoration: underline;
 }
 
-#messageBox-login {
+#messageBoxLogin {
     border: 2px;
     background-color: #f9f9f9;
     padding: 10px;
     margin: 20px;
+    border-style: solid;
 }
 
-#message-login {
+#messageLogin {
     margin: 0;
 }
 

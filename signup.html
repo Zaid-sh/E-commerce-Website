@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>ZIDDY'S CAR DEALERSHIP - Login</title>
     <style>
@@ -60,9 +60,10 @@
         }
 
         function showMessage(message) {
-        var messageBox = document.getElementById("message");
+        var messageBox = document.getElementById("message-signup"); // Updated to target the correct element
         messageBox.innerHTML = message.replace(/\n/g, "<br>");
         }
+
 
     </script>
 
@@ -103,7 +104,6 @@
             </tr>
         </table>
     </form>
-
 
 </main>
 
